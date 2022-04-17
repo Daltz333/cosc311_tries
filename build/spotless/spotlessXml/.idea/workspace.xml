@@ -6,15 +6,34 @@
   <component name="ChangeListManager">
     <list default="true" id="da763c33-5c2a-4beb-ad82-b0b2c2469e2e"
       name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/words.txt"
+        afterDir="false" />
       <change
         beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock"
         beforeDir="false"
         afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock"
         afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml"
+        beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml"
+        afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml"
+        beforeDir="false"
+        afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml"
+        beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml"
+        afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml"
+        beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml"
+        afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false"
+        afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Trie.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle"
         beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle"
+        afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle"
+        beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle"
         afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java"
         beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java"
@@ -67,6 +86,10 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent
         name="C:\Users\daltz\Documents\COSC311_Tries\src\main\java" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent
+        name="C:\Users\daltz\Documents\COSC311_Tries\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
