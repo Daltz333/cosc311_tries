@@ -54,63 +54,31 @@ public class Trie {
     // boolean that stops searching if no matching child value exists
     boolean breakPath = false;
 
-    // Last visited word
-    String lastWord = "";
-    TrieNode lastWordNode = null;
-
     // progress through word one character at a time
     for (int i = 0; i < word.length(); i++) {
-      String character = "" + word.toLowerCase().charAt(i);
+      String character = "" + word.charAt(i);
       // Gather all children of current node to check for matching values
       ArrayList<TrieNode> children = current.getChildren(current);
 
       // search children for equivalent node with equivalent String
       for (int j = 0; j < children.size(); j++) {
         // if we find matching child, that child is our next node
-        if (children.get(j).value.toLowerCase().equals(character)) {
+        if (children.get(j).value.equals(character)) {
           current = children.get(j);
           depth++;
-          lastWordNode = children.get(j);
-          lastWord = lastWord + children.get(j).value;
           break;
         }
         // breakPath becomes true if we have exhausted all available children
-        if (j == children.size() - 1) {
-          breakPath = true;
-        }
+        if (j == children.size() - 1) breakPath = true;
       }
-
       // no way to progress further -> stop searching!
-      if (breakPath) {
-        break;
-      }
-
+      if (breakPath) break;
       // if final character happens to be a word...
-      if (lastWord.equals(word) && lastWordNode.isWord) {
+      if (current.isWord && i == word.length() - 1 && i == depth) {
         return "Word found: " + word;
       }
     }
-
-    String returnString = "Invalid word or not in dictionary.";
-
-    TrieNode predictNode = current.children.get(0);
-    String predictWord = lastWord;
-
-    int index = 0;
-
-    TrieNode prevPredictNode;
-
-    while (true) {
-      if (index >= predictNode.children.size()) {
-        predictWord = predictWord + predictNode.value;
-        break;
-      }
-
-      predictWord = predictWord + predictNode.value;
-      predictNode = predictNode.children.get(index);
-    }
-
-    return returnString + "\nDid you mean: " + predictWord;
+    return "Invalid word/not currently present.";
   }
 
   // this class represents a character or string in the Trie tree

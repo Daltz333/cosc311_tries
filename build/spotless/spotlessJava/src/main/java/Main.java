@@ -1,16 +1,9 @@
-import java.io.*;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.util.Scanner;
-import java.util.stream.Stream;
-
 public class Main {
   // obviously everything here is just a showcase that Trie.java should work
   // Everything here can be deleted to make way for actual input of words into our Trie via file IO,
   // and user IO prompting for searching the Trie
   public static void main(String[] args) {
     Trie trie = new Trie();
-    /**
     trie.addWord("a");
     trie.addWord("apple");
     trie.addWord("banner");
@@ -45,30 +38,5 @@ public class Main {
     // isWord=true, it would just change the isWord of that child rather than adding another.
     System.out.println(trie.search("critic"));
     System.out.println(trie.search("critics"));
-    */
-
-    InputStream is = Main.class.getResourceAsStream("words.txt");
-
-    if (is == null) {
-      System.out.println("Dictionary was not found!");
-      return;
-    }
-
-    BufferedReader bufReader = new BufferedReader(new InputStreamReader(is));
-
-    String[] lines = bufReader.lines().toArray(String[]::new);
-
-    for (String line : lines) {
-      trie.addWord(line);
-    }
-
-    boolean exit = false;
-    Scanner scanner = new Scanner(System.in);
-
-    while(!exit) {
-      System.out.print("Query? ");
-
-      System.out.println(trie.search(scanner.nextLine()));
-    }
   }
 }
